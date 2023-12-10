@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header></header>
+  <main id="target" class="target" name="target"></main>
+  <article></article>
+  <footer></footer>
+  <script>
+
+    /*
+     Необходимо найти и записать в переменную узел-элемент <main></main> всеми возможными способами
+     Например : 
+     const main1 = "Ваш код"
+     console.log('main1', main1);  // output: "main1" <main id="target" class="target" name="target"></main>
+     const main2 = ...
+     console.log('main2', main2);  // output: "main2" <main id="target" class="target" name="target"></main>
+     и т. д.
+     Важно : Если решаем идти по узлам с корня документа, то идем только по кратчайшему пути
+    */
+
+    const main1 = document.getElementById('target');
+    console.log('main1', main1);
+
+    const main2 = document.getElementsByName('target')[0];
+    console.log('main2', main2);
+
+    const main3 = document.getElementsByClassName('target')[0];
+    console.log('main3', main3);
+
+    const main4 = document.getElementsByTagName('main')[0];
+    console.log('main4', main4);
+
+    const main5 = document.querySelector('.target');
+    console.log('main5', main5);
+
+    const main7 = document.body.firstElementChild.nextElementSibling;
+    console.log('main7', main7);
+
+    const main8 = document.body.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
+    console.log('main8', main8);
+
+    const main9 = document.querySelectorAll('.target')[0];
+    console.log('main9', main9);
+
+  </script>
+</body>
+
+</html>
